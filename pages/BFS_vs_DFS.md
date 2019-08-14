@@ -6,6 +6,6 @@ description: How to use BFS & DFS algorithms in python
 
 Breadth-First Search
 
-<img src="images/BFS.jpg" alt="hi" class="inline"/>
+<img src="images/BFS.com" alt="hi" class="inline"/>
 
 
