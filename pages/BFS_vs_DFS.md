@@ -4,7 +4,7 @@ title: Breadth-First Search & Depth-First Search in Python
 description: How to use BFS & DFS algorithms in python
 ---
 
-##Breadth-First Search
+# Breadth-First Search
 
 <img src="https://kylemcclay.github.io/python_dsa/images/BFS.jpg" alt="Broken" class="inline"/>
 
@@ -13,7 +13,7 @@ description: How to use BFS & DFS algorithms in python
   - visually: imagine roots branching out
  - Data structure used is a queue
 
-##Depth-First Search
+# Depth-First Search
 
 <img src="https://kylemcclay.github.io/python_dsa/images/DFS.jpg" alt="Broken" class="inline"/>
 
@@ -23,7 +23,7 @@ description: How to use BFS & DFS algorithms in python
  - Data structure used is a stack
 
 
-##Sample problem
+# Sample problem
 [Leetcode Problem 240 Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
@@ -57,7 +57,7 @@ target_1 = 5
 target_2 = 20
 
 
-##Breadth-First Search Implementaion
+# Breadth-First Search Implementaion
 ```python
 def bfsMatrix(matrix, target):
     # subtracting 1 from are max row/columns because the first row is row zero (0)
