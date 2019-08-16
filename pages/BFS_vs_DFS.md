@@ -5,6 +5,7 @@ description: How to use BFS & DFS algorithms in python
 ---
 
 ##Breadth-First Search
+
 <img src="https://kylemcclay.github.io/python_dsa/images/BFS.jpg" alt="Broken" class="inline"/>
 
 - Breadth-First Search
@@ -13,6 +14,7 @@ description: How to use BFS & DFS algorithms in python
  - Data structure used is a queue
 
 ##Depth-First Search
+
 <img src="https://kylemcclay.github.io/python_dsa/images/DFS.jpg" alt="Broken" class="inline"/>
 
 - Depth-First Search
