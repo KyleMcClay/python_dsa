@@ -9,18 +9,18 @@ description: How to use BFS & DFS algorithms in python
 <img src="https://kylemcclay.github.io/python_dsa/images/BFS.jpg" alt="Broken" class="inline"/>
 
 - Breadth-First Search
-  - searches information by exploring each node closest to the starting point
-  - visually: imagine roots branching out
-  - Data structure used is a queue
+  - searches graph by exploring each node closest to the starting point
+  - thinking visually: imagine tree roots branching out
+  - Data structure = queue
 
 ### Depth-First Search
 
 <img src="https://kylemcclay.github.io/python_dsa/images/DFS.jpg" alt="Broken" class="inline"/>
 
 - Depth-First Search
-  - searches information by exploring each path one by one.
-  - visually: imagine spikes coming one by one
-  - Data structure used is a stack
+  - searches graph by exploring each path one by one.
+  - thinking visually: imagine spikes coming from a point one by one
+  - Data structure = stack
 
 
 ### Sample problem
@@ -44,7 +44,7 @@ Given target = 5, return true.
 
 Given target = 20, return false.
 
-### sample data
+### Sample Data
 matrix = [
 [1,   4,  7, 11, 15]
 [2,   5,  8, 12, 19]
@@ -56,7 +56,22 @@ target_1 = 5
 target_2 = 20
 
 
-### Breadth-First Search Implementaion
+### Breadth-First Search Implementation
+notes before we get started
+
+The order of search for BFS
+step 1 [1]
+step 2 [2, 4]
+step 3 [3, 5, 7]
+step 4 [10, 6, 8, 11]
+step 5 [18, 13, 9, 12, 15]
+step 6 [21, 14, 16, 19]
+step 7 [23, 17, 22]
+step 8 [26, 24]
+step 9 [30]
+
+any number greater than the target number means the node does not need to search anymore
+"""
 ```python
 def bfsMatrix(matrix, target):
     # subtracting 1 from are max row/columns because the first row is row zero (0)
@@ -87,4 +102,49 @@ def bfsMatrix(matrix, target):
         queue.pop(0)
 
     return False
+```
+
+
+### Depth-First Search Implementation
+The order of search for DFS
+step 1 [1, 2, 3, 10, 18, 21]
+step 2 [13, 14, 23]
+step 3 [17, 26]
+step 4 [24]
+step 4 [6, 9, 16, 22]
+step 5 [5, 8, 12, 19]
+step 6 [4, 7, 11, 15]
+
+
+```python
+from collections import deque
+def dfsMatrix(matrix, target):
+    max_rows = len(matrix) - 1
+    max_columns = len(matrix[0]) - 1
+    stack = deque()
+    stack.append((0,0))
+    visited_nodes = set()
+
+    while len(stack) != 0:
+        m = stack[0][0]
+        n = stack[0][1]
+        current_node = matrix[m][n]
+        visited_nodes.add((m, n))
+        if current_node < target:
+            if (n+1) <= max_columns and (m, n+1) not in visited_nodes:
+                stack.appendleft((m, n+1))
+            if (m+1) <= max_rows and (m+1, n) not in visited_nodes:
+                stack.appendleft((m+1, n))
+        elif current_node > target:
+            pass
+        elif current_node == target:
+            return True
+        stack.remove((m,n))
+    return False
+```
+
+### Simple Solution Implementation
+```python
+def searchMatrix(matrix, target):
+    return any(target in set(row) for row in matrix)
 ```
