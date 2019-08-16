@@ -9,18 +9,18 @@ description: How to use BFS & DFS algorithms in python
 <img src="https://kylemcclay.github.io/python_dsa/images/BFS.jpg" alt="Broken" class="inline"/>
 
 - Breadth-First Search
-  - Searches graph by exploring each node closest to the starting point
+  - Searches a graph by exploring each node closest to the starting point
   - Thinking Visually: imagine tree roots branching out
-  - Data structure = queue
+  - Data Structure = queue
 
 ### Depth-First Search
 
 <img src="https://kylemcclay.github.io/python_dsa/images/DFS.jpg" alt="Broken" class="inline"/>
 
 - Depth-First Search
-  - Searches graph by exploring each path one by one.
+  - Searches a graph by exploring each path one by one.
   - Thinking Visually: imagine spikes coming from a point one by one
-  - Data structure = stack
+  - Data Structure = stack
 
 
 ### Sample problem
@@ -45,6 +45,9 @@ Given target = 5, return true.
 Given target = 20, return false.
 
 ### Sample Data
+
+If you want to try this problem out for yourself use the sample data :)
+
 matrix = [ <br />
 [1,   4,  7, 11, 15] <br />
 [2,   5,  8, 12, 19] <br />
@@ -70,7 +73,7 @@ step 7 [23, 17, 22] <br />
 step 8 [26, 24] <br />
 step 9 [30] <br />
 
-any number greater than the target number means the node does not need to be searched anymore
+any node greater than the target number means the path does not need to be searched anymore
 """
 ```python
 def bfsMatrix(matrix, target):
