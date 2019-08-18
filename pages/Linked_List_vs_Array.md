@@ -6,15 +6,14 @@ description: How to use linked list & array data structures in python
 
 ## Linked List vs Array
 
+### A linked list is a simple data structure which "links" each element to the next element.
+
+### An array stores each element in an ordered block of memory.
+
 <img src="https://kylemcclay.github.io/python_dsa/images\Linked_list_array.jpg" alt="Broken" class="inline"/>
 
-A linked list is a simple data structure which "links" each element to the next element.
 
-An array stores each element in an ordered block of memory.
-
-to give understanding to what this means I will ask a series of questions and explain.
-
-** Find the third element in a linked list & array. **
+**Find the third element in a linked list & array.**
 
 go to the linked list in memory  
 go to the first element  
@@ -25,7 +24,7 @@ from the second element find the third element
 go to the array in memory
 go to the third element
 
-** Add a new element for the third element in the linked list & array. **
+**Add a new element for the third element in the linked list & array.**
 
 go to the linked list in memory  
 go to the first element  
