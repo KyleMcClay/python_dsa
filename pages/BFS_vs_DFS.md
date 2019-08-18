@@ -74,7 +74,7 @@ step 8 [26, 24] <br />
 step 9 [30] <br />
 
 any node greater than the target number means the path does not need to be searched anymore
-"""
+
 ```python
 def bfsMatrix(matrix, target):
     # subtracting 1 from are max row/columns because the first row is row zero (0)
