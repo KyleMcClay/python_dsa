@@ -40,4 +40,6 @@ Python DSA is designed to help implement the fundamental data structures and alg
 
 ---
 ## Table of contents
-<a href="pages\BFS_vs_DFS.html">BFS vs DFS</a>
+<a href="pages\BFS_vs_DFS.html">BFS vs DFS</a>  
+<a href="pages\Linked_List_vs_Array.html">Linked List vs Array</a>
+
